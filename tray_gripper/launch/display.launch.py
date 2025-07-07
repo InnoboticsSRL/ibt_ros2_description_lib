@@ -34,10 +34,6 @@ def generate_launch_description():
         ]
     )
 
-    joint_state_publisher_gui_node = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui'
-    )
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -49,7 +45,6 @@ def generate_launch_description():
     )
     nodes = [
         robot_state_publisher_node,
-        joint_state_publisher_gui_node,
         rviz_node
     ]
 

@@ -152,7 +152,7 @@
         </link>
         <joint
             name="${prefix}_camera"
-            type="continuous">
+            type="fixed">
             <origin
                 xyz="0 -0.0812 0.0263400000000001"
                 rpy="1.5707963267949 0 0" />
