@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="tray_gripper">
+
+    <xacro:arg name="prefix" default="tray_gripper" />
+    <xacro:include filename="$(find tray_gripper)/xacro/tray_gripper.xacro" />
+
+    <xacro:tray_gripper
+        prefix="$(arg prefix)"
+    >
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:tray_gripper>
+
+</robot>
