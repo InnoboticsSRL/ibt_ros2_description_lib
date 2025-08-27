@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="tracked_constructa">
+
+    <xacro:arg name="prefix" default="tracked_constructa" />
+    <xacro:include filename="$(find tracked_constructa)/xacro/tracked_constructa.xacro" />
+
+    <xacro:tracked_constructa
+        prefix="$(arg prefix)"
+    >
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:tracked_constructa>
+
+</robot>
