@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="camera_tray">
+  <link
+    name="camera_fix">
+    <inertial>
+      <origin
+        xyz="0.00093904 -0.0072336 0.013727"
+        rpy="0 0 0" />
+      <mass
+        value="0.65552" />
+      <inertia
+        ixx="0.00019435"
+        ixy="7.7148E-06"
+        ixz="-3.2724E-06"
+        iyy="0.00042405"
+        iyz="-2.4049E-06"
+        izz="0.00059504" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://camera_tray/meshes/camera_fix.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://camera_tray/meshes/camera_fix.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="view">
+    <inertial>
+      <origin
+        xyz="-2.6597E-19 4.3368E-19 -0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0030238" />
+      <inertia
+        ixx="2.5198E-08"
+        ixy="-2.4654E-40"
+        ixz="-2.3245E-40"
+        iyy="2.5198E-08"
+        iyz="-1.7264E-40"
+        izz="3.7797E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://camera_tray/meshes/view.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://camera_tray/meshes/view.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="view"
+    type="fixed">
+    <origin
+      xyz="0.0015 -0.00634 0.03162"
+      rpy="0 0 3.1416" />
+    <parent
+      link="camera_fix" />
+    <child
+      link="view" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

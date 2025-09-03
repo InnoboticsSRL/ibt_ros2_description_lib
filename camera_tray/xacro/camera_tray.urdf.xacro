@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="camera_tray">
+
+    <xacro:arg name="prefix" default="camera_tray" />
+    <xacro:include filename="$(find camera_tray)/xacro/camera_tray.xacro" />
+
+    <xacro:camera_tray
+        prefix="$(arg prefix)"
+    >
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:camera_tray>
+
+</robot>
