@@ -19,7 +19,7 @@ def generate_launch_description():
 
     # Configuration files
     xacro_file = os.path.join(pkg_dir, 'xacro', 'tracked_constructa.urdf.xacro')
-    robot_description = ParameterValue(Command(['xacro', ' ', xacro_file, ' prefix:=tracked_constructa']),
+    robot_description = ParameterValue(Command(['xacro', ' ', xacro_file, ' prefix:=tracked']),
                                        value_type=str)
     rviz_config_path = os.path.join(pkg_dir, 'config', 'config.rviz')
 

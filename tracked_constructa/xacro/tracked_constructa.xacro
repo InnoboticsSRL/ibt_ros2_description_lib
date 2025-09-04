@@ -3,7 +3,7 @@
 
     <xacro:macro name="tracked_constructa"
         params="
-        prefix:='tracked_constructa' 
+        prefix:='tracked' 
         connected_to:='' 
         *origin"
     >
@@ -98,7 +98,7 @@
             </collision>
         </link>
         <joint
-            name="${prefix}_wheel_right"
+            name="${prefix}_right_wheel_joint"
             type="revolute">
             <origin
                 xyz="-0.68249 -0.71198 0.29748"
@@ -156,7 +156,7 @@
             </collision>
         </link>
         <joint
-            name="${prefix}_wheel_left"
+            name="${prefix}_left_wheel_joint"
             type="revolute">
             <origin
                 xyz="-0.68249 0.71198 0.29746"
