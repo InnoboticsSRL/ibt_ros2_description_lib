@@ -10,7 +10,7 @@
 
         <!-- virtual joint -->
         <xacro:unless value="${not connected_to}">
-            <joint name="world" type="fixed">
+            <joint name="${prefix}_vj" type="fixed">
                 <parent link="${connected_to}" />
                 <child link="${prefix}_camera_fix" />
                 <xacro:insert_block name="origin" />
