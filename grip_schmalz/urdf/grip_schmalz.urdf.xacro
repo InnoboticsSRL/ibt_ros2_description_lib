@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="grip_schmalz" xmlns:xacro="http://ros.org/robotwiki/xacro">
+  <xacro:macro name="grip_schmalz" params="name parent *origin">
+
+    <joint name="${name}_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="${name}_base_link" />
+      <xacro:insert_block name="origin" />
+    </joint>
+
+    <link
+      name="${name}_base_link">
+      <inertial>
+        <origin
+          xyz="-0.051892 0.004452 0.016773"
+          rpy="0 0 0" />
+        <mass
+          value="0.41884" />
+        <inertia
+          ixx="0.00013691"
+          ixy="1.0072E-06"
+          ixz="-2.5401E-06"
+          iyy="0.00041805"
+          iyz="6.2031E-07"
+          izz="0.00053506" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://grip_schmalz/meshes/grip_base_link.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.86667 0.86667 0.8902 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://grip_schmalz/meshes/grip_base_link.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <link
+      name="${name}_camera">
+      <inertial>
+        <origin
+          xyz="-0.00024739 6.0869E-05 -0.013049"
+          rpy="0 0 0" />
+        <mass
+          value="0.04476" />
+        <inertia
+          ixx="3.945E-06"
+          ixy="-2.7882E-09"
+          ixz="-2.4465E-07"
+          iyy="2.7365E-05"
+          iyz="1.3284E-09"
+          izz="2.728E-05" />
+      </inertial>
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://grip_schmalz/meshes/camera.STL" />
+        </geometry>
+        <material
+          name="">
+          <color
+            rgba="0.79216 0.81961 0.93333 1" />
+        </material>
+      </visual>
+      <collision>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://grip_schmalz/meshes/camera.STL" />
+        </geometry>
+      </collision>
+    </link>
+    <joint
+      name="${name}_camera"
+      type="fixed">
+      <origin
+        xyz="-0.062 0.053 0.0215"
+        rpy="0 0 0" />
+      <parent 
+        link="${name}_base_link" />
+      <child
+        link="${name}_camera" />
+      <axis
+        xyz="0 0 0" />
+    </joint>
+  </xacro:macro>
+</robot>
