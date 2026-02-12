@@ -57,6 +57,27 @@
                 </geometry>
             </collision>
         </link>
+
+        <joint
+            name="${prefix}_tcp_joint"
+            type="fixed">
+            <origin
+                xyz="0 -0.1345 0.225"
+                rpy="0 0 0" />
+            <parent
+                link="${prefix}_base_link" />
+            <child
+                link="${prefix}_tcp" />
+            <axis
+                xyz="0 0 0" />
+        </joint>
+
+        <link
+            name="${prefix}_tcp"
+        >
+        </link>
+
+
         <link
             name="${prefix}_rot">
             <inertial>
