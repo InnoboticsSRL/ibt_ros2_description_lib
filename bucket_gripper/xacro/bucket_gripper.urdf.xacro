@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="bucket_gripper">
+
+    <xacro:arg name="prefix" default="bucket_gripper" />
+    <xacro:include filename="$(find bucket_gripper)/xacro/bucket_gripper.xacro" />
+
+    <xacro:bucket_gripper
+        prefix="$(arg prefix)"
+    >
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:bucket_gripper>
+
+</robot>

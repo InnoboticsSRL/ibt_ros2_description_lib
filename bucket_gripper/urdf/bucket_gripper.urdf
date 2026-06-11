@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bucket_gripper">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.3651E-06 -4.3839E-06 0.063528"
+        rpy="0 0 0" />
+      <mass
+        value="3.8087" />
+      <inertia
+        ixx="0.070068"
+        ixy="1.0646E-07"
+        ixz="4.2826E-09"
+        iyy="0.0016823"
+        iyz="-2.5893E-08"
+        izz="0.07095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="bucket_link">
+    <inertial>
+      <origin
+        xyz="8.4412E-15 2.092E-06 -0.05627"
+        rpy="0 0 0" />
+      <mass
+        value="1.124" />
+      <inertia
+        ixx="0.0019399"
+        ixy="4.5E-20"
+        ixz="-6.715E-21"
+        iyy="0.0022422"
+        iyz="-5.15E-19"
+        izz="0.001098" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/bucket_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.86667 0.86667 0.8902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/bucket_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bucket_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.22243"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bucket_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="adapter_link">
+    <inertial>
+      <origin
+        xyz="-2.7992E-15 8.193E-16 -0.0044409"
+        rpy="0 0 0" />
+      <mass
+        value="0.40686" />
+      <inertia
+        ixx="0.00022117"
+        ixy="8.1944E-07"
+        ixz="1.4492E-20"
+        iyy="0.00060509"
+        iyz="1.1647E-21"
+        izz="0.00082067" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/adapter_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/adapter_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="adapter_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.1105"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="adapter_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bucket_gripper/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.1845 0.0015 0.11707"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
