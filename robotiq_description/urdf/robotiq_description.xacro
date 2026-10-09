@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="robotiq_description" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Including xacro -->
+  <xacro:include filename="$(find robotiq_description)/urdf/robotiq_description.urdf.xacro" />
+
+  <!-- Virtual link for visualization -->
+  <link name="world"/>
+
+  <!-- Calling the xacro -->
+  <xacro:robotiq_description parent="world">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:robotiq_description>
+
+</robot>
