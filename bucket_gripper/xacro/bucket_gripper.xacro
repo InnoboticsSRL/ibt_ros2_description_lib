@@ -25,7 +25,7 @@
 
     <link name="${prefix}_base_link">
       <inertial>
-        <origin xyz="-2.3651E-06 -4.3839E-06 0.063528" rpy="0 0 0" />
+        <origin xyz="5.6808E-06 -0.028248 0.061236" rpy="0 0 0" />
         <mass value="3.8087" />
         <inertia
           ixx="0.070068"  ixy="1.0646E-07" ixz="4.2826E-09"
@@ -51,7 +51,7 @@
 
     <link name="${prefix}_bucket_link">
       <inertial>
-        <origin xyz="8.4412E-15 2.092E-06 -0.05627" rpy="0 0 0" />
+        <origin xyz="9.1954E-15 3.7621E-06 -0.015079" rpy="0 0 0" />
         <mass value="1.124" />
         <inertia
           ixx="0.0019399" ixy="4.5E-20"   ixz="-6.715E-21"
@@ -77,7 +77,7 @@
 
     <link name="${prefix}_adapter_link">
       <inertial>
-        <origin xyz="-2.7992E-15 8.193E-16 -0.0044409" rpy="0 0 0" />
+        <origin xyz="-1.3884E-15 -6.3275E-15 0.0090197" rpy="0 0 0" />
         <mass value="0.40686" />
         <inertia
           ixx="0.00022117" ixy="8.1944E-07" ixz="1.4492E-20"
@@ -103,7 +103,7 @@
 
     <link name="${prefix}_camera_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-0.0018857 0.006046 -0.019502" rpy="0 0 0" />
         <mass value="0" />
         <inertia
           ixx="0" ixy="0" ixz="0"
@@ -144,7 +144,7 @@
     </joint>
 
     <joint name="${prefix}_camera_joint" type="fixed">
-      <origin xyz="0.1845 0.0015 0.11707" rpy="0 0 1.57" />
+      <origin xyz="0.1215 0.0015 0.05332" rpy="0 0 1.5708" />
       <parent link="${prefix}_base_link" />
       <child  link="${prefix}_camera_link" />
     </joint>
